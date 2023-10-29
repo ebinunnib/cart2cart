@@ -1,0 +1,8 @@
+a:hover{
+    background-color: blueviolet;
+    color: black;
+    border-radius: bisque;
+}
+button:hover{
+    background-color: blueviolet;
+}

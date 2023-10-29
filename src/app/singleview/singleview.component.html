@@ -1,0 +1,22 @@
+<div *ngFor="let item of pdata" class="card mb-3 container" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{item.pname}}</h5>
+        <h5 class="card-title">{{item.price}}</h5>
+        <h5 class="card-title">{{item.count}}</h5>
+        <h5 class="card-title">{{item.rating}}</h5>
+
+
+      </div>
+      <div class="p-5">
+        <button (click)="addTocart()" class="p-1" style="background-color: black; color: aquamarine; margin-right:15px;">Add To Cart </button>
+        <button class="p-1" style="background-color: black; color: aquamarine;"> Add To Wishlist</button>
+
+      </div>
+    </div>
+  </div>
+</div>

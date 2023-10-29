@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="text-end p-5  ">
+        <a style="text-decoration:none ;" routerLink="admin-login">Login as Admin</a>
+
+    </div>
+    <div class="row " >
+        <div *ngFor="let i of products" class="card "
+            style="width: 10rem; margin-right: 50px; margin-bottom: 50px;background-color: rgba(252, 251, 251, 0.027); border: none; ">
+            <img src="{{i.image}}" class="card-img-top" alt="...">
+            <div class="card-body" style="background-color: rgba(240, 248, 255, 0.007);">
+                <h2 class="card-text">{{i.price}}</h2>
+
+                <h5 class="card-text">{{i.pname}}</h5>
+            </div>
+            <button class="p-1" style="background-color: deeppink;color: bisque; border-radius: 10px;"><a
+                    style="color: cornsilk; text-decoration: none;"
+                    routerLink="/singleview/{{i._id}}">ViewProduct</a></button>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="mbody">
+  <div class="text-center m-5 p-5 ">
+    <h1>Product Manegement</h1>
+  </div>
+  <div class="text-end">
+    <button class="btn-btn-dar-2 ms-5" href="http://localhost:4200/app-addproduct" (click)="addproduct()">Add New
+      Product</button>
+  
+  </div>
+  <div>
+    
+  <table class="table table table-striped-columns">
+    <thead>
+      <tr>
+        <th scope="col">index</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Price</th>
+  
+        <th scope="col">Action</th>
+  
+  
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of pdata,let j=index">
+        <th scope="row">{{j+1}}</th>
+        <td>{{i.pname}}</td>
+        <td> <img style="width: 3rem; height: 2rem;" src="{{i.image}}" alt=""></td>
+        <td>{{i.price}}</td>
+  
+        <td><button (click)="editproduct(i._id)">Edit</button> <button (click)="deletep(i._id)">Delete</button></td>
+  
+  
+      </tr>
+  
+    </tbody>
+  </table>
+
+
+</div>

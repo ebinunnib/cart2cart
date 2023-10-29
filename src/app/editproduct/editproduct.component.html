@@ -1,0 +1,34 @@
+<body>
+    <div class="container">
+        <h2>Edit Product</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="pname">Product Name</label>
+                <input [(ngModel)]="pdata.pname" type="text" id="pname" name="pname">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input [(ngModel)]="pdata.price" type="number" id="price" name="price" >
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input [(ngModel)]="pdata.rating" type="number" id="rating" name="rating" >
+            </div>
+            <div class="form-group">
+                <label for="count">Count</label>
+                <input [(ngModel)]="pdata.count" type="number" id="count" name="count" >
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input  type="text" id="image" name="image" >
+            </div>
+            <div class="form-group">
+                <button (click)="editProduct()" type="submit">Update Product</button>
+            </div>
+        </form>
+    </div>
+</body>
