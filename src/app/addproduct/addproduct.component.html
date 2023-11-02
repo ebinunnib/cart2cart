@@ -1,10 +1,10 @@
 <body>
-    <div class="container">
-        <h2>Add Product</h2>
+    <div class="container addresort " style="color: aliceblue; ">
+        <h2 style="text-align: center; font-size: xx-large; ">Add Resorts</h2>
         <form  [formGroup]="addProductForm" (ngSubmit)="addProduct()">
             <div class="form-group" >
-                <label for="pname">Product Name</label>
-                <input formControlName="pname" type="text" id="pname" name="pname" required>
+                <label for="Rname">Product Name</label>
+                <input formControlName="Rname" type="text" id="Rname" name="pname" required>
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
@@ -18,10 +18,7 @@
             </div>
 
 
-            <div class="form-group">
-                <label for="rating">Rating</label>
-                <input formControlName="rating" type="number" id="rating" name="rating" required>
-            </div>
+           
             <div class="form-group">
                 <label for="count">Count</label>
                 <input formControlName="count" type="number" id="count" name="count" required>
@@ -30,8 +27,8 @@
                 <label for="image">Image </label>
                 <input formControlName="image" type="text" id="image" name="image" required>
             </div>
-            <div class="form-group">
-                <button  type="submit">Add Product</button>
+            <div class="form-group mt-3  width-30px">
+                <button  class="mb-3 width-30px" type="submit">Add Product</button>
             </div>
         </form>
     </div>

@@ -7,10 +7,12 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartserviceService {
 
+  search=new BehaviorSubject("")
+
   cartCount = new BehaviorSubject(0)
 
 
-  baseUrl: any = "http://localhost:5001";
+  baseUrl: any = "http://localhost:5111";
   uid: any = ""
 
   constructor(private http: HttpClient) {
@@ -74,8 +76,15 @@ export class CartserviceService {
   }
   cartitems(userid: any) {
     return this.http.get(`${this.baseUrl}/cart/cartitems/${userid}`)
-
   }
-  
-  
+  removecart(userid: any) {
+    return this.http.delete(`${this.baseUrl}/cart/removecart/${userid}`)
+  }
+getAllUsers(){
+  return this.http.get(`${this.baseUrl}/user-access`)
+}
+userDelete(userid: any) {
+  return this.http.delete(`${this.baseUrl}/user/remove/${userid}`)
+}
+
 }

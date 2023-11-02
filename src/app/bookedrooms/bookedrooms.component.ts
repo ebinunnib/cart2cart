@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { CartserviceService } from '../servicefile/cartservice.service';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-bookedrooms',
+  templateUrl: './bookedrooms.component.html',
+  styleUrls: ['./bookedrooms.component.css']
 })
-export class HeaderComponent implements OnInit {
- count:any=0
+export class BookedroomsComponent implements OnInit {
+
+  count:any=0
   pdata:any=[]
   id: any=""
   total:Number=0
   uid: any;
-  searchData:any=""
 
   constructor(private cs:CartserviceService,private rout:Router){}
   ngOnInit(): void {
     this.cartcounts()
-   
-  
+   this.cartitems()
  
 }
 cartcounts(){
@@ -29,14 +28,9 @@ cartcounts(){
 
   
 })
-
     
 }
-accessData(event:any){
-  this.searchData=event.target.value
-  this.cs.search.next(this.searchData)
-  console.log(this.searchData);
-}
+
 
 cartitems() {
   if (localStorage.getItem("user")) {
@@ -48,8 +42,7 @@ cartitems() {
         console.log(data);
         
         this.pdata=data.message
-        this.rout.navigateByUrl('bookedrooms')
-
+       
        
         
       },
@@ -96,5 +89,6 @@ removecart(id:any){
 
    })
 }
+
 
 }

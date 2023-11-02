@@ -1,18 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f4f4;
+    /* background-color: #f8f4f4; */
+    background-image: url(https://wallpapercave.com/dwp1x/wp3611724.jpg);
+    background-size: cover;
+    background-color: blue;
+    
+    background-repeat: no-repeat;
+    height: 550px;
 }
 
-.container {
+.edit {
+    height: 300px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; 
     padding: 20px;
-    background-color: #06fd2f;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #06fd2f44; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -23,7 +30,7 @@ body {
 
 .form-group input[type="text"],
 .form-group input[type="number"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

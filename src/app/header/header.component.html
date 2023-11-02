@@ -1,59 +1,52 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Carting</a>
+<nav class="navbar navbar-expand-lg" style="background-color:   rgba(137, 43, 226, 0.014);">
+  <div class="container-fluid" style="background-color: rgba(137, 43, 226, 0);" >
+    <a style="text-decoration: none;color: rgb(7, 7, 114);" href=""><h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"><i class="fa fa-duotone fa-mountain-sun"></i>MoutEvents</h3>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
         <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li> -->
-        <!-- <li class="nav-item dropdown"> -->
-          <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
+ 
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true"></a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input [(ngModel)]="searchData" (keyup)="accessData($event)" class="form-control me-2" type="search" placeholder="Search Here..." aria-label="Search" name="searchData">
       </form>
-      <button (click)="cartitems()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <!-- <button (click)="cartitems()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         cart
         <span class="badge bg-dark text-white ms-1 rounded-pill">{{count}}</span>
 
-      </button>
-      <button (click)="toWishlist()" type="button" class="btn btn-danger">
+      </button> -->
+      <!-- <button (click)="toWishlist()" type="button" class="btn btn-danger">
         wishlist
         <span class="badge bg-dark text-white ms-1 rounded-pill">$</span>
 
-      </button>
+      </button> -->
 
 
       <button (click)="login()"  type="button" class="btn btn-success">
         login
-        <span class="badge bg-dark text-white ms-1 rounded-pill">$</span></button>
+        <span class="badge bg-dark text-white ms-1 rounded-pill"></span></button>
+        
+      <button (click)="logout()"  type="button" class="btn btn-danger">
+        LogOut
+        <span class="badge bg-dark text-white ms-1 rounded-pill"></span></button>
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Profile
+          <button class="btn btn dropdown-toggle p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user fa-xl"></i>
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#"></a>View Profile</li>
-            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+            <li><a class="dropdown-item" href="#"></a>Edit Profile</li>
+
+            <!-- <li><a class="dropdown-item" (click)="logout()">Logout</a></li> -->
           </ul>
         </div>
  
@@ -63,60 +56,3 @@
 
 </nav>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <h5 class="modal-title" id="exampleModalLabel">
-          Your Shopping Cart
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-        </button>
-      </div>
-
-      <!-- ... (other modal content) ... -->
-
-      <div class="modal-body">
-        <table class="table table-image">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Product</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Total</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let product of pdata; let i = index">
-            
-              <td class="w-25">
-                <img [src]="product.image " class="img-fluid img-thumbnail" alt="Product Image">
-              </td>
-              <td>{{ product.pname }}</td>
-              <td>₹ {{ product.price }}</td>
-              <td>
-                <button>-</button>
-               {{product.quantity}}
-                <button>+</button>
-                
-              </td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i>Remove</i>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="d-flex justify-content-end">
-          <h5>Total: <span class="price text-success">₹ {{total}}</span></h5>
-        </div>
-      </div>
-      <div class="modal-footer border-top-0 d-flex justify-content-end">
-        <button type="button" class="btn btn-primary">CheckOut</button>
-      </div>
-    </div>
-  </div>
-</div>

@@ -1,22 +1,26 @@
-<div class="mbody">
-  <div class="text-center m-5 p-5 ">
-    <h1>Product Manegement</h1>
-  </div>
-  <div class="text-end">
-    <button class="btn-btn-dar-2 ms-5" href="http://localhost:4200/app-addproduct" (click)="addproduct()">Add New
-      Product</button>
+
+
   
+
+  <div class="mbody">
+  <div class="text-center p-5 ">
+    <h1 style="font-size: xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Room Details</h1>
   </div>
+ 
   <div>
+    <div class=" " style="align-items: end;">
+      <button class="btn btn-dark-2 ms-0  align-items:end; " style="background-color: chartreuse;" href="http://localhost:4200/app-addproduct" (click)="addproduct()">Add New Room Details</button>
+    </div>
     
-  <table class="table table table-striped-columns">
+  <table class="table table table-striped-columns  " style="background: none;">
     <thead>
       <tr>
         <th scope="col">index</th>
         <th scope="col">Product Name</th>
         <th scope="col">Image</th>
         <th scope="col">Price</th>
-  
+        <th scope="col">Count</th>
+        <th scope="col">Discription</th>
         <th scope="col">Action</th>
   
   
@@ -26,17 +30,27 @@
     <tbody>
       <tr *ngFor="let i of pdata,let j=index">
         <th scope="row">{{j+1}}</th>
-        <td>{{i.pname}}</td>
-        <td> <img style="width: 3rem; height: 2rem;" src="{{i.image}}" alt=""></td>
+        <td>{{i.Rname}}</td>
+        
+        <td> <img style="width: 6rem; height: 5rem;" src="{{i.image}}" alt=""></td>
         <td>{{i.price}}</td>
+        <td>{{i.count}}</td>
+
+
+        <td>{{i.discription}}</td>
+
   
-        <td><button (click)="editproduct(i._id)">Edit</button> <button (click)="deletep(i._id)">Delete</button></td>
+        <td><button class="me-3" style="background-color: darkgoldenrod; border-radius: 20px;" (click)="editproduct(i._id)">Edit</button> <button style="background-color: red; border-radius: 20px;" (click)="deletep(i._id)">Delete</button></td>
   
   
       </tr>
+
+      
   
     </tbody>
   </table>
 
 
 </div>
+
+

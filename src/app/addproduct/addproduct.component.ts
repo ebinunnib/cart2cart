@@ -11,22 +11,20 @@ import { Router } from '@angular/router';
 export class AddproductComponent implements OnInit {
   constructor(private fb: FormBuilder,private cs:CartserviceService,private rout:Router) { }
   addProductForm = this.fb.group({
-    pname: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-    price: ['', [Validators.required, Validators.pattern('[0-9A-Za-z]+')]],
+    Rname: ['', [Validators.required]],
+    price: ['', [Validators.required]],
     discription: ['', [Validators.required]],
-    image: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-    rating: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-    count: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+    image: ['', [Validators.required]],
+    count: ['', [Validators.required]],
   })
   ngOnInit(): void { }
   addProduct() {
     const Path=this.addProductForm.value
     const bodyData = {
-      pname:Path.pname,
+      Rname:Path.Rname,
       price:Path.price,
       discription:Path.discription,
       image:Path.image,
-      rating:Path.rating,
       count:Path.count
     }
 

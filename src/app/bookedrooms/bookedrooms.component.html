@@ -1,0 +1,38 @@
+<h1 class="yourbook">Your Bookings</h1>
+
+      <!-- ... (other modal content) ... -->
+
+        <table class="table table-image">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <!-- <th scope="col">Quantity</th> -->
+              <th scope="col">Total</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of pdata; let i = index">
+            
+              <td class="w-25">
+                <img [src]="product.image " class="img-fluid img-thumbnail" alt="Product Image">
+              </td>
+              <td>{{ product.pname }}</td>
+              <td>₹ {{ product.price }}</td>
+              <td>
+                <!-- <button>-</button> -->
+               <!-- {{product.quantity}} -->
+                <!-- <button>+</button> -->
+                
+              </td>
+              <td>
+                <a (click)="removecart(product._id)" class="btn btn-danger btn-sm">
+                  <i>Remove</i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       

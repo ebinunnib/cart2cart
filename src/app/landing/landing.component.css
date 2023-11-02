@@ -1,0 +1,223 @@
+
+.card{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+}
+#_card{ 
+    padding:50px 50px;
+    background-color:#f6f7f8;
+    color: aliceblue;
+    background-image: url(https://wallpapercave.com/wp/wp4782986.png);
+    /* height: 350px; */
+
+    
+  }
+ 
+  
+  #_card h2{
+    font-weight:700;
+    font-size:42px;
+    color:#fdf9f9;
+    font-family: sans-serif;
+  }
+  
+  #_card .cards{
+    margin-top:30px;
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    color: #fcfafa;
+  }
+  #_card .card1{
+    background-color:#fafaf7b6;
+    flex-basis:150px;
+    transition:all 0.3s ease-in;
+    flex-basic:200px;
+    flex-grow:1;
+    text-align:center;
+    padding: 2rem;
+    border-radius: 2rem;
+
+
+    
+  }
+  #_card .card2{
+    background-color:#fcfbf9b6;
+    flex-basis:150px;
+    transition:all 0.3s ease-in;
+    flex-basic:200px;
+    flex-grow:1;
+    text-align:center;
+    padding: 2rem;
+    border-radius: 2rem;
+
+
+  }
+  #_card .card3{
+    background-color:#fcfcfab6;
+    flex-basis:150px;
+    transition:all 0.3s ease-in;
+    flex-basic:200px;
+    flex-grow:1;
+    text-align:center;
+    padding: 2rem;
+    border-radius: 2rem;
+
+
+  }
+  #_card .card img{
+    width:190px;
+  }
+  #_card .card1:hover{
+    scale:1.05;
+    background-color: #f7f4f4e7;
+    border: 2px;
+    border: 2px gold solid;
+
+  }
+  #_card .card2:hover{
+    scale:1.05;
+        background-color: #f7f4f4e7;
+        border: 2px;
+        border: 2px gold solid;
+
+
+  }
+  #_card .card3:hover{
+    scale:1.05;
+    background-color: #f7f4f4e7;
+    border: 2px gold solid;
+
+
+  }
+  #_card .card1 a{
+    text-decoration: none;
+    color: black;
+  }
+  #_card .card2 a{
+    text-decoration: none;
+    color: black;
+
+  }
+  #_card .card3 a{
+    text-decoration: none;
+    color: black;
+
+  }
+
+  @media (max-width: 767px) {
+    .ban_text strong {
+      font-size: 30px;
+    }
+  
+    .ban_text strong span {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+  
+    .ban_text p {
+      font-size: 16px;
+    }
+  
+    .ban_text a {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  
+    .cards-comp .card img {
+      height: 8rem;
+    }
+  
+  
+  }
+  
+  /* For screens up to 575px width (e.g., smartphones) */
+  @media (max-width: 575px) {
+    .ban_text strong {
+      font-size: 26px;
+      padding: 10px 0;
+    }
+  
+    .ban_text strong span {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  
+    .ban_text p {
+      font-size: 14px;
+    }
+  
+    .ban_text a {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  
+    .btn-more {
+      font-size: 12px;
+    }
+  
+    .cards-comp .card img {
+      height: 6rem;
+    }
+  
+  
+  }
+  /* Default styles */
+.ban_sec {
+  margin-bottom: 1rem;
+  padding-top: 0.2rem;
+  width: 100%;
+}
+
+.ban_img {
+  width: 100%;
+  position: relative;
+}
+
+.ban_img img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.ban_text {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+}
+
+.ban_text strong {
+  font: 800 40px/48px "Montserrat", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.ban_text strong span {
+  font: 400 28px/34px "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.ban_text p {
+  font: 400 20px/24px "Montserrat", sans-serif;
+  color: #fff;
+  margin: 7px 0 15px;
+}
+
+.ban_text a {
+  display: inline-block;
+  font: 800 16px/20px "Montserrat", sans-serif;
+  background: #282828;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 24px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.ban_text a:hover {
+  background: #50af47;
+}

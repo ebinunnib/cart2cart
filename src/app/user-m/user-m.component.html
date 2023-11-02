@@ -1,35 +1,40 @@
+<div class="mbody">
+  <div class="text-center m-5 p-5 ">
+    <h1> Manege Users</h1>
+  </div>
 
-<h2><a routerLink="/user.login">userRegister</a></h2>
+  <div>
 
-<div class="text-center m-5 p-5 ">
-<h1>User Manegement</h1>
-</div>
-<table class="table table table-striped-columns">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="table table table-striped-columns">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of users,let j=index">
+          <th scope="row">{{j+1}}</th>
+
+          <td>{{i.email}}</td>
+
+
+
+          
+
+
+          <td><button (click)="userDelete(i._id)"
+              style="background-color: red; border-radius: 20px;">Delete</button></td>
+
+
+        </tr>
+
+
+
+
+      </tbody>
+    </table>
+
+
+  </div>

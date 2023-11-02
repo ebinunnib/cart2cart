@@ -1,0 +1,38 @@
+<!-- 
+<div class="cardsearch">
+    <h5 class="scard-header" style="font-size: x-large;">FIND YOU WANT</h5>
+    <div class="scard-body">
+      <form class="d-flex" role="search">
+        <input class="form-control " type="search" placeholder="Check In"  aria-label="Search">  
+      <input class="form-control " type="search" placeholder="Check Out" aria-label="Search">
+      <input class="form-control" type="search" placeholder="No:Guists" aria-label="Search">
+      <a href="#" class="btn btn-primary">Search</a>
+    </form>  
+    </div>
+  </div>
+   -->
+<!-- hotal roooms cards -->
+<!-- ------------------------------------------ -->
+<!-- 
+
+     <div class="text-end p-5  ">
+          <a style="text-decoration:none ;" routerLink="admin-login">Login as Admin</a>
+      </div> 
+    -->
+  
+    <div class="row">
+  
+      <div *ngFor="let i of products | headSearch: searchString: ['Rname', 'discription', 'price']" class="col-lg-6 col-md-6 col-sm-12 mb-4">
+        <div class="card p-3" style="background-color: white;">
+          <img style="height: 300px;" src="{{i.image}}" class="card-img-top" alt="...">
+          <div class="card-body" style="background-color: rgba(240, 248, 255, 0.055);">
+            <h3 class="card-text">{{i.Rname}}</h3>
+            <h4 style="color: rgb(10, 243, 10);" class="card-text">$- {{i.price}}</h4>
+            <h6 class="card-text">{{i.discription}}</h6>
+          </div>
+          <button class="p-1 ms-3 View-btn">
+            <a routerLink="/singleview/{{i._id}}">View More</a>
+          </button>
+        </div>
+      </div>
+    </div>

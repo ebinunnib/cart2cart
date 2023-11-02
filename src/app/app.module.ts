@@ -18,6 +18,12 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { SingleviewComponent } from './singleview/singleview.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { BookedroomsComponent } from './bookedrooms/bookedrooms.component';
+import { ROOMSComponent } from './rooms/rooms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+import { HeadSearchPipe } from './pipes/headSearch/head-search.pipe';
 
 
 @NgModule({
@@ -35,14 +41,20 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     UserloginComponent,
     UserRegisterComponent,
     SingleviewComponent,
-    WishlistComponent
+    WishlistComponent,
+    BookedroomsComponent,
+    ROOMSComponent,
+    HeadSearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
+    MatButtonModule
     
   ],
   providers: [],

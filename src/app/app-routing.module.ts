@@ -11,19 +11,26 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { EditproductComponent } from './editproduct/editproduct.component';
 import { SingleviewComponent } from './singleview/singleview.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { BookedroomsComponent } from './bookedrooms/bookedrooms.component';
+import { ROOMSComponent } from './rooms/rooms.component';
 
 const routes: Routes = [
   { path: "", component: LandingComponent },
   { path: "admin-login", component: AdminLoginComponent },
   { path: "admin-home", component: AdminHomeComponent },
   { path: "user-m", component: UserMComponent },
-  { path: "product-m", component: ProductMComponent },
+  { path: "Room-m", component: ProductMComponent },
   { path: "addproduct", component: AddproductComponent },
   { path: "editproduct/:id", component: EditproductComponent},
   { path: "user.login", component: UserloginComponent },
   { path: "user.register", component: UserRegisterComponent },
   { path: "singleview/:id", component: SingleviewComponent },
-  { path: "wishlist", component:WishlistComponent },
+  { path: "wishlist", component:WishlistComponent }, 
+   { path: "boockedrooms", component:BookedroomsComponent },
+   { path: "rooms", component:ROOMSComponent },
+
+
+
 
 
 

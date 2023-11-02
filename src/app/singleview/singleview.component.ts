@@ -33,7 +33,7 @@ export class SingleviewComponent implements OnInit {
     })
 
   }
-  addTocart(){
+  booking(){
     if(localStorage.getItem("user")){
     if (localStorage.getItem("user")){
       this.uid=localStorage.getItem("user")

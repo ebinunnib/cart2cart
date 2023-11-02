@@ -1,23 +1,66 @@
-<div class="container">
-    <div class="text-end p-5  ">
-        <a style="text-decoration:none ;" routerLink="admin-login">Login as Admin</a>
 
-    </div>
-    <div class="row " >
-        <div *ngFor="let i of products" class="card "
-            style="width: 10rem; margin-right: 50px; margin-bottom: 50px;background-color: rgba(252, 251, 251, 0.027); border: none; ">
-            <img src="{{i.image}}" class="card-img-top" alt="...">
-            <div class="card-body" style="background-color: rgba(240, 248, 255, 0.007);">
-                <h2 class="card-text">{{i.price}}</h2>
+<section class="ban_sec">
+    <div class="container1">
+        <div class="ban_img">
+            <img src="https://images.pexels.com/photos/6043246/pexels-photo-6043246.jpeg?auto=compress&cs=tinysrgb&w=400" alt="banner">
+            <div class="ban_text">
+                <strong>
+                    <span>Boost your Moments</span><br> Mount events
+                </strong>
+                <p>
+expolore your moments colaborate with us its more memmorable for you....
+                </p>
 
-                <h5 class="card-text">{{i.pname}}</h5>
+                <a href="#">Connect</a>
             </div>
-            <button class="p-1" style="background-color: deeppink;color: bisque; border-radius: 10px;"><a
-                    style="color: cornsilk; text-decoration: none;"
-                    routerLink="/singleview/{{i._id}}">ViewProduct</a></button>
         </div>
+    </div>
+</section>
 
+<!-- different page navigations -->
+<div id="_card">
+  <div class="heading">
+  </div>
+  <div class="cards">
+    <div class="card1">
+      <a href="http://localhost:4200/rooms">
+        <h1 >Reserve Your Rooms
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit laborum molestias dolor voluptatibus non
+          </p>
+        </a>
+        
+    </div>
+    <div class="card2">
+      <a href="">
+        <h1 >Set Your Day
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit laborum molestias dolor voluptatibus non
+         </p>
+
+
+      </a>
 
     </div>
+    <div class="card3">
 
+      <a href="">
+        <h1 >Make Your events
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit laborum molestias dolor voluptatibus non
+          </p>
+        </a>
+    </div>
+
+
+  </div>
 </div>
+
+<!-- hotal roooms cards -->
+<!-- ------------------------------------------ -->
+
+
+  <!-- <div class="text-end p-5  ">
+        <a style="text-decoration:none ;" routerLink="admin-login">Login as Admin</a>
+    </div> -->
+

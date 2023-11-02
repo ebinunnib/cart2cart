@@ -1,10 +1,10 @@
-<body>
-    <div class="container">
-        <h2>Edit Product</h2>
-        <form action="">
+<body class="">
+    <div class="edit" style="color: white;">
+        <h2 style="text-align: center; font-size: xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Edit Details</h2>
+        <form >
             <div class="form-group">
-                <label for="pname">Product Name</label>
-                <input [(ngModel)]="pdata.pname" type="text" id="pname" name="pname">
+                <label for="Rname">Product Name</label>
+                <input [(ngModel)]="pdata.Rname" type="text" id="Rname" name="Rname">
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
@@ -12,19 +12,19 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" id="description" name="description" required>
+                <input [(ngModel)]="pdata.discription" type="text" id="description" name="description" required>
             </div>
-            <div class="form-group">
-                <label for="rating">Rating</label>
+            <!-- <div class="form-group">
+                <label for="rating">Location</label>
                 <input [(ngModel)]="pdata.rating" type="number" id="rating" name="rating" >
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="count">Count</label>
                 <input [(ngModel)]="pdata.count" type="number" id="count" name="count" >
             </div>
             <div class="form-group">
                 <label for="image">Image</label>
-                <input  type="text" id="image" name="image" >
+                <input [(ngModel)]="pdata.image" type="text" id="image" name="image" >
             </div>
             <div class="form-group">
                 <button (click)="editProduct()" type="submit">Update Product</button>

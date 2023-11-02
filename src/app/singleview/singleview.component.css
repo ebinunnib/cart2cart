@@ -1,3 +1,55 @@
-img{
+.imge{
+
+    height: 50%;
+    width: 50%;
+    /* padding: 10px; */
+
     
 }
+
+.btn-content{
+    display: flex;
+    align-items: start;
+    border: 1px;
+    /* justify-content: center; */
+    color: white;
+    
+}
+#booknow{
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(34, 248, 6);
+    border: 1;
+    justify-self: start;
+    align-items: start;
+    
+    
+}
+#btncart:hover{
+    background-color: rgb(0, 225, 255);
+    border-color: rgb(214, 10, 10);
+    border-radius: 10px;
+}
+#booknow:hover{
+    background-color: rgb(3, 243, 252);
+    border-color: rgb(243, 6, 6);
+    border-radius: 10px;
+}
+.singleview{
+/* background-image: url("https://img.freepik.com/free-photo/big-swimming-pool-with-trees-deck-chairs_1203-1035.jpg?size=626&ext=jpg&ga=GA1.1.1397672390.1684562726&semt=ais"); */
+background-repeat: no-repeat;
+background-size:cover;
+width: 70%;
+background: none;
+border: 0;
+
+}
+.single-body{
+    background-image: url(https://img.freepik.com/free-photo/abstract-blur-swimming-pool_74190-2083.jpg?size=626&ext=jpg&ga=GA1.1.1397672390.1684562726&semt=ais);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+
