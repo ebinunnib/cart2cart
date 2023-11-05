@@ -17,7 +17,7 @@ export class SingleviewComponent implements OnInit {
   }
   ngOnInit(): void {
 
-    this.ar.params.subscribe((data:any)=>{
+    this.ar.params.subscribe((data:any)=>{ 
       this.pid=data.id
       console.log(this.pid);
       
@@ -25,22 +25,19 @@ export class SingleviewComponent implements OnInit {
       next:(result:any)=>{
         this.pdata=[result.message]
         console.log(this.pdata);
-        
-
       }
-    
     })
     })
-
   }
-  booking(){
+  book(){
     if(localStorage.getItem("user")){
     if (localStorage.getItem("user")){
       this.uid=localStorage.getItem("user")
-      this.cs.addToCart(this.uid,this.pid).subscribe({
+      this.cs.booking(this.uid,this.pid).subscribe({
         next:(result:any)=>{
           alert(result.message)
-          this.cs.cartUpdate()
+          // this.cs.cartUpdate()
+          this.rout.navigateByUrl("/forbook")
         }
       })
     }

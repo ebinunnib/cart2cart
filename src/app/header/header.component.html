@@ -18,37 +18,43 @@
       <form class="d-flex" role="search">
         <input [(ngModel)]="searchData" (keyup)="accessData($event)" class="form-control me-2" type="search" placeholder="Search Here..." aria-label="Search" name="searchData">
       </form>
+
+
       <!-- <button (click)="cartitems()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         cart
         <span class="badge bg-dark text-white ms-1 rounded-pill">{{count}}</span>
 
-      </button> -->
-      <!-- <button (click)="toWishlist()" type="button" class="btn btn-danger">
+      </button> 
+     <button (click)="toWishlist()" type="button" class="btn btn-danger">
         wishlist
         <span class="badge bg-dark text-white ms-1 rounded-pill">$</span>
 
-      </button> -->
-
-
-      <button (click)="login()"  type="button" class="btn btn-success">
-        login
-        <span class="badge bg-dark text-white ms-1 rounded-pill"></span></button>
+      </button>  -->
+      <div>
+        <button (click)="login()" type="button" class="btn btn-success" *ngIf="!isLoggedIn">
+          login
+          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+        </button>
+        <button (click)="logout()" type="button" class="btn btn-danger" *ngIf="isLoggedIn">
+          logout
+          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+        </button>
+      </div>
+      
         
-      <button (click)="logout()"  type="button" class="btn btn-danger">
-        LogOut
-        <span class="badge bg-dark text-white ms-1 rounded-pill"></span></button>
 
         <div class="dropdown">
           <button class="btn btn dropdown-toggle p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-user fa-xl"></i>
           </button>
+        
+          <!-- Dropdown menu -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#"></a>View Profile</li>
-            <li><a class="dropdown-item" href="#"></a>Edit Profile</li>
-
-            <!-- <li><a class="dropdown-item" (click)="logout()">Logout</a></li> -->
+            <li><a class="dropdown-item" >Profile</a></li>
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
           </ul>
         </div>
+        
  
 
     </div>

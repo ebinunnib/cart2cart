@@ -19,11 +19,16 @@
           <a style="text-decoration:none ;" routerLink="admin-login">Login as Admin</a>
       </div> 
     -->
+    <div class="p-2" style="background-color: rgba(0, 255, 255, 0.116);">
+      
   
-    <div class="row">
+       <h1 style="text-align: center;">Yes...!!welcome</h1>
+       <h2 style="text-align: center; font-size: xx-large;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Wake up in paradise</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi doloremque asperiores quo nihil nulla veritatis doloribus facere nemo voluptas, iure aut magnam dolorum odit, culpa placeat quia officia quasi quis! Reprehenderit assumenda reiciendis earum rerum fuga eligendi nisi tempore totam repellendus sequi nam pariatur dicta rem blanditiis, soluta nesciunt laboriosam a deleniti.</p>
+       <div class="row">
   
       <div *ngFor="let i of products | headSearch: searchString: ['Rname', 'discription', 'price']" class="col-lg-6 col-md-6 col-sm-12 mb-4">
-        <div class="card p-3" style="background-color: white;">
+        <div class="card p-3" style="background-color: rgba(255, 255, 255, 0.548);">
           <img style="height: 300px;" src="{{i.image}}" class="card-img-top" alt="...">
           <div class="card-body" style="background-color: rgba(240, 248, 255, 0.055);">
             <h3 class="card-text">{{i.Rname}}</h3>
@@ -36,3 +41,4 @@
         </div>
       </div>
     </div>
+  </div>

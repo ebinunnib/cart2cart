@@ -1,0 +1,93 @@
+
+<div class="body">
+  <div class="container " style="color: aliceblue;">
+    <div>
+        <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;">Booking Form</h1>
+
+    </div>
+    <form  [formGroup]="BookForm" (ngSubmit)="book()">
+      <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input formControlName="Fullname" type="text" id="full-name" placeholder="Full Name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input formControlName="email" type="email" id="email"placeholder="E-mail" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input formControlName="phonenum" type="tel" id="phone"placeholder="Phone Number" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input formControlName="address" type="text" id="address" placeholder="Address" name="address" required>
+      </div>
+      
+      
+      <div>
+        <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;">Reservation Details</h1>
+
+    </div>
+      <div class="form-group">
+        <label for="check-in">Check-in Date:</label>
+        <input formControlName="checkin" type="date" id="check-in" placeholder=" ##/##/####" name="check-in" required>
+      </div>
+      <div class="form-group">
+        <label for="check-out">Check-out Date:</label>
+        <input formControlName="checkout" type="date" id="check-out" name="check-out" required>
+      </div>
+      <div class="form-group">
+        <label for="adults">Number of Adults:</label>
+        <input formControlName="adults" placeholder="How Meny Adults" type="number" id="adults" name="adults" required>
+      </div>
+      <div class="form-group">
+        <label for="children">Number of Children:</label>
+        <input formControlName="children" placeholder="How Meny Children" type="number" id="children" name="children" required>
+      </div>
+      
+      <h2>Room Preferences</h2>
+      <div class="form-group">
+        <label for="room-type">Room Type:</label>
+        <select formControlName="roomtype"  (change)="updateSelectType()"  id="room-type" name="room-type" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="special-requests">Special Requests:</label>
+        <textarea formControlName="splreq" placeholder="Any other Additional Service Requests like Food,Drinks etc.... " id="special-requests" name="special-requests"></textarea>
+      </div>
+      
+      <!-- <h2>Payment Information</h2>
+      <div class="form-group">
+        <label for="credit-card">Credit Card Number:</label>
+        <input type="text" id="credit-card" name="credit-card" required>
+      </div>
+      <div class="form-group">
+        <label for="expiration">Expiration Date:</label>
+        <input type="text" id="expiration" name="expiration" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+      </div>
+      
+      <h2>Billing Information</h2>
+      <div class="form-group">
+        <label for="billing-address">Billing Address:</label>
+        <input type="text" id="billing-address" name="billing-address">
+      </div> -->
+      
+      <!-- <h2>Additional Services</h2> -->
+    <!-- <input type="checkbox" id="agree" name="agree" required> -->
+<div>
+  
+</div>
+  <button class="form-button"   type="submit">SubmitForm</button>   
+  <button routerLink="/boocked" class="form-button"   type="submit">preview</button>   
+
+    </form> 
+  </div>
+
+</div>

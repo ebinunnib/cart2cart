@@ -14,11 +14,18 @@ export class HeaderComponent implements OnInit {
   total:Number=0
   uid: any;
   searchData:any=""
+  isLoggedIn: boolean = false; // Set this to true when the user is logged in
 
-  constructor(private cs:CartserviceService,private rout:Router){}
+  constructor(private cs:CartserviceService,private rout:Router){
+
+    const user = localStorage.getItem('user');
+    this.isLoggedIn = user !== null;
+  }
   ngOnInit(): void {
     this.cartcounts()
-   
+    
+  
+
   
  
 }
@@ -75,11 +82,14 @@ toWishlist(){
 }
 logout() {
   localStorage.removeItem("user");
+  this.isLoggedIn = false;
+  this.rout.navigateByUrl('user.login')
 }
 
 login(){
 
   this.rout.navigateByUrl('user.login')
+  this.isLoggedIn = true;
 
 }
 removecart(id:any){

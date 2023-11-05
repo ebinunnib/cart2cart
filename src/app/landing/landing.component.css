@@ -221,3 +221,154 @@
 .ban_text a:hover {
   background: #50af47;
 }
+/* comment cards */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap");
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+body {
+  background: #f9f9f9;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+  gap: 4em;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem clamp(1rem, 5%, 3rem);
+}
+.card {
+  padding: 3.5em 2em 2em;
+  width: 300px;
+  background: #fff;
+  box-shadow: 5px 7px 17px rgb(0 0 0 / 20%);
+  position: relative;
+
+  .rectangle {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 50px;
+    background: #e8e8e8;
+    height: 10px;
+    display: block;
+    border-radius: 50px;
+  }
+
+  &-content {
+    padding-top: 7.2em;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.35em;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &-img {
+    position: relative;
+  }
+
+  &-img-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    p {
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      display: grid;
+      place-items: center;
+      padding: 0.9em;
+      text-align: center;
+      position: relative;
+      top: 100%;
+      min-width: 85px;
+      min-height: 85px;
+      word-wrap: break-word;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+
+  &:nth-child(1) .card-img-overlay {
+    @include background-opacity(#056f6a, 0.5);
+  }
+
+  &:nth-child(1) .card-img-overlay p {
+    @include background-opacity(#056f6a, 1);
+  }
+
+  &:nth-child(2) .card-img-overlay {
+    @include background-opacity(#b37399, 0.5);
+  }
+
+  &:nth-child(2) .card-img-overlay p {
+    @include background-opacity(#b37399, 1);
+  }
+}
+
+/* side scroling card comment */
+
+:root {
+  --page-margin: min(2rem, 5vw);
+  color: #444;
+}
+
+/* section {
+  display: grid;
+  grid-template-columns: var(--page-margin) [center-start] 1fr [center-end] var(--page-margin);
+  
+  & > * {
+    grid-column: center;
+  }
+} */
+
+.cards-wrapper {
+  grid-column: center-start / -1;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow: auto;
+  padding-bottom: 1rem;
+  padding-right: var(--page-margin);
+  
+  .card {
+    display: grid;
+    place-content: center;
+    background-color: #fcfbf9;
+    color: #fafcfc;
+    font-size: 1.5rem;
+    height: 20rem;
+    min-width: 13rem;
+  }
+}

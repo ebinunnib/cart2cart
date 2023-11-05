@@ -1,31 +1,65 @@
 <body class="single-body">
-
+<!-- 
   <div class="singleview">
 
-  </div>
+ 
   <div *ngFor="let item of pdata" class="card mb-3 container singleview" style="max-width: 100%;">
-    <div class="row g-0 container">
+    <div class="row g-0 container d-flex">
+
       <div class="col-md-4 imge ">
         <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
       </div>
+
       <div class="col-md-8">
         <div class="card-body">
           <h1 class="card-title"> Room Type :{{item.Rname}}</h1>
           <h3 style="color: darkgreen;" class="card-title">$ -{{item.price}}</h3>
           <h5 class="card-title">Room Count : {{item.count}}</h5>
           <h5 class="card-title">Discription :{{item.discription}}</h5>
-  
-  
         </div>
-  
         <div class=" p-3 btn-content btn-singleview">
   
-          <button id="booknow" class="p-1" (click)="booking()"> BookNOw</button>
+          <button id="booknow" class="p-1" (click)="booking()"> BookYourRoom</button>
   
+        </div>  
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div *ngFor="let item of pdata" class="row" style="background-color: rgba(240, 248, 255, 0);">
+  <div  class="col-sm-6 mb-3 mb-sm-0" style="background-color: rgba(240, 248, 255, 0); border: none;">
+    <div class="card" style="background-color: rgba(240, 248, 255, 0); border: none;">
+      <div class="card-body" style="background-color: rgba(240, 248, 255, 0); border: none; "> 
+        <div class="col-md-4 imge" style="height: 500px; width: 100%;">
+        <img style="height: 500px; width: 100%;" src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 mt-5">
+    <div class="card" style="background-color: rgba(240, 248, 255, 0);  border: none;">
+      <div class="card-body" style="background-color: rgba(240, 248, 255, 0); border: none;">
+        <div class="card-body" style="background-color: rgba(240, 248, 255, 0); border: none; ">
+          <h1 class="card-title" style="font-size: xx-large;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; ">{{item.Rname}}</h1>
+          <h3 style="color: darkgreen;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" class="card-title">$ -{{item.price}}</h3>
+          <!-- <h5 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Room Count : {{item.count}}</h5> -->
+          <h5 class="card-title" style="font-family: 'Times New Roman', Times, serif;font-size: x-large;">{{item.discription}}</h5>
+        </div>
+        <div class=" p-3 btn-content btn-singleview">
+  
+          <button id="booknow" class="p-1" (click)="book()">Book</button>  <button id="booknow" class="p-1"  style="background-color:red;" ><a href="http://localhost:4200/rooms" style="text-decoration: none;color: antiquewhite;">Cancel</a></button>
+
+
+        
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
 
 </body>
 

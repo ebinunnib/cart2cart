@@ -63,11 +63,12 @@ export class CartserviceService {
     const body = { email, psw }
     return this.http.post(`${this.baseUrl}/user-login`,body)
   }
-  addToCart(userId: any, pId: any) {
+  booking(userId: any, pId: any) {
     const body = {
       userId, pId
     }
     return this.http.post(`${this.baseUrl}/addtocart`,body)
+    // /addtocart
   }
  
   cartcount(id: any) {
@@ -76,7 +77,9 @@ export class CartserviceService {
   }
   cartitems(userid: any) {
     return this.http.get(`${this.baseUrl}/cart/cartitems/${userid}`)
+
   }
+  
   removecart(userid: any) {
     return this.http.delete(`${this.baseUrl}/cart/removecart/${userid}`)
   }
@@ -86,5 +89,10 @@ getAllUsers(){
 userDelete(userid: any) {
   return this.http.delete(`${this.baseUrl}/user/remove/${userid}`)
 }
-
+book(body: any) {
+  return this.http.post(`${this.baseUrl}/user/bookForm`,body)
+}
+getform(id:any) {
+  return this.http.get(`${this.baseUrl}/book/form/${id}`)
+}
 }

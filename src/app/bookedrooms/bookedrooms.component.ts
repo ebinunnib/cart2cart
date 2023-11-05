@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartserviceService } from '../servicefile/cartservice.service';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookedrooms',
@@ -13,23 +13,47 @@ export class BookedroomsComponent implements OnInit {
   pdata:any=[]
   id: any=""
   total:Number=0
-  uid: any;
+  uid: any=""
+  pid: any=""
 
-  constructor(private cs:CartserviceService,private rout:Router){}
+  constructor(private cs:CartserviceService,private rout:Router ,private ar:ActivatedRoute){}
   ngOnInit(): void {
-    this.cartcounts()
    this.cartitems()
+
+   this.ar.params.subscribe((data:any)=>{
+    this.pid=data.id
+    console.log(this.pid)
+    
+
+  })
  
 }
-cartcounts(){
-  this.cs.cartCount.subscribe((data:any)=>{
-    console.log(data);
-    this.count=data
 
-  
-})
     
+
+preview(){
+  if (localStorage.getItem("user")) {
+    this.id = localStorage.getItem("user");
+    console.log(this.id);
+    
+    this.cs.getform(this.id).subscribe({
+      next: (data: any) => {
+        console.log("pevw:::",data);
+        
+        this.pdata=data.message
+        console.log("ppeviwe:::",this.pdata);
+        
+       
+       
+        
+      },
+      error: (error: any) => {
+        alert(error)
+      }
+    })
+  }
 }
+
 
 
 cartitems() {
@@ -39,12 +63,11 @@ cartitems() {
     
     this.cs.cartitems(this.id).subscribe({
       next: (data: any) => {
-        console.log(data);
+        console.log("cart bookd",data);
         
-        this.pdata=data.message
-       
-       
-        
+        this.pdata=data.message 
+        // this.rout.navigateByUrl("product-m")
+
       },
       error: (error: any) => {
         alert(error)
@@ -59,21 +82,6 @@ marginPrice(){
     totalPrice += item.price * item.quantity;
   }
   this.total = totalPrice;
-}
-
-toWishlist(){
-  localStorage.getItem("user")
-  this.uid=localStorage.getItem("user")
-  this.rout.navigateByUrl('/wishlist/'+this.uid)
-}
-logout() {
-  localStorage.removeItem("user");
-}
-
-login(){
-
-  this.rout.navigateByUrl('user.login')
-
 }
 removecart(id:any){
   this.uid=localStorage.getItem("user")

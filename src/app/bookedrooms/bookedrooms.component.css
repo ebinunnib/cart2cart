@@ -3,3 +3,93 @@
   /* margin-bottom: 50px; */
   padding: 20px;
 }
+
+.body {
+  background-color: #0e0d0d4d;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* height: 200vh; */
+  /* background-image: url(https://wallpapercave.com/dwp1x/wp3783015.jpg); */
+  /* background-repeat: repeat; */
+  /* background-size: cover; */
+
+}
+
+.container {
+
+  margin-top: 10px;
+margin-bottom: 100px;
+  max-width: 800px;
+  background: #f7f5f510;
+  border: 1px solid #0f03031e;
+  border-radius: 5px;
+  padding: 20px;
+  overflow-y: auto;
+  height: 200vh; /* Adjust the height as needed */
+}
+
+/* Rest of your CSS styles for form elements, as previously provided */
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  background: #00ff37;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 10PX;
+}
+
+input[type="submit"]:hover {
+  background: #dddedf;
+}
+/* .body{
+  margin-bottom: -500px;
+} */
+/* .form-button{
+  background-color: aquamarine;
+  padding: 10px;
+  margin-bottom: 5px;
+
+}
+:hover.form-button{
+  background-color: chartreuse;
+}
+
+.form-button2{
+  background-color: rgb(255, 153, 127);
+  padding: 10px;
+  margin-bottom: 5px;
+}
+:hover.form-button2{
+  background-color: rgb(255, 0, 0);
+} */

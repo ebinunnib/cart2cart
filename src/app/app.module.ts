@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 import { HeadSearchPipe } from './pipes/headSearch/head-search.pipe';
+import { ForbookComponent } from './forbook/forbook.component';
+import { FormViewComponent } from './form-view/form-view.component';
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { HeadSearchPipe } from './pipes/headSearch/head-search.pipe';
     WishlistComponent,
     BookedroomsComponent,
     ROOMSComponent,
-    HeadSearchPipe
+    HeadSearchPipe,
+    ForbookComponent,
+    FormViewComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
