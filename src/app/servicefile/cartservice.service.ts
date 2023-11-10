@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
+
+const option={
+  headers:new HttpHeaders()
+}
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +20,27 @@ export class CartserviceService {
   uid: any = ""
 
   constructor(private http: HttpClient) {
+
+
+
+
+
     this.cartUpdate()
   }
+
+  getToken(){
+    //create a header object
+    const headers=new HttpHeaders()
+
+    if(localStorage.getItem("token")){
+      const token =JSON.parse(localStorage.getItem("token") ||"")
+      option.headers=headers.append("qaccess_token",token)
+    }
+    return option
+  }
+
+
+
   cartUpdate() {
 
     if (localStorage.getItem("user")) {
@@ -38,7 +61,7 @@ export class CartserviceService {
     return this.http.post(`${this.baseUrl}/admin/login`, bodyData)
   }
   addProduct(body: any) {
-    return this.http.post(`${this.baseUrl}/admin/addProduct`, body)
+    return this.http.post(`${this.baseUrl}/admin/addProduct`, body )
   }
   getAllProduct() {
     return this.http.get(`${this.baseUrl}/admin/getProduct`)

@@ -35,7 +35,7 @@ export class SingleviewComponent implements OnInit {
       this.uid=localStorage.getItem("user")
       this.cs.booking(this.uid,this.pid).subscribe({
         next:(result:any)=>{
-          alert(result.message)
+          // alert(result.message)
           // this.cs.cartUpdate()
           this.rout.navigateByUrl("/forbook")
         }

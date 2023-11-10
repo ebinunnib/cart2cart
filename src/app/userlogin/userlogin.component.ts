@@ -21,6 +21,8 @@ next:(result:any)=>{
   alert(result.message)
  
   localStorage.setItem("user",result._id)
+  localStorage.setItem("token",result.token)
+  localStorage.setItem("currentname",result.currentuser)
   this.rout.navigateByUrl("")
  },
  error:(result:any)=>{

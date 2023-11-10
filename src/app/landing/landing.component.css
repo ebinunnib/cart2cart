@@ -258,7 +258,7 @@ body {
 }
 .card {
   padding: 3.5em 2em 2em;
-  width: 300px;
+  /* width: 300px; */
   background: #fff;
   box-shadow: 5px 7px 17px rgb(0 0 0 / 20%);
   position: relative;
@@ -367,8 +367,11 @@ body {
     place-content: center;
     background-color: #fcfbf9;
     color: #fafcfc;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     height: 20rem;
     min-width: 13rem;
   }
+}
+.about{
+  background-color: rgba(0, 0, 255, 0.295);
 }

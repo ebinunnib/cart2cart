@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CartserviceService } from '../servicefile/cartservice.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-forbook',
@@ -60,6 +61,14 @@ bookitems(){
   this.uid=localStorage.getItem("user")
 
   }
+}
+showLoginAlert() {
+  Swal.fire({
+    title: " Booking Success!",
+      text: "Do you want to continue",
+      icon: "success",
+      confirmButtonText: "Cool"
+  });
 }
 
 }

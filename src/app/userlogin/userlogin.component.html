@@ -1,18 +1,30 @@
-<br><br><br><br><br><br><br>    
-    <div class="container "style="">
-        <h2>Login Form</h2>
-        <form id="loginForm" [formGroup]="UserlogForm">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input formControlName="email" type="text" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input formControlName="psw" type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" style="margin-right:10px;" (click)="login()">Login</button>
-                <a style="text-decoration: none;" routerLink="/user.register"> account create</a>
-            </div>
-        </form>
-    </div><br><br><br><br><br><br><br><br>
+<br><br>
+<div style="height: 65px;">
+    <a style="text-decoration: none;color: rgb(2, 2, 71);" href=""><h3 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: xx-large; text-align: center;" > <img style="height: 4rem;width: 5rem;" src="https://i.postimg.cc/gr9BRSt5/4793624.png" alt="" > MoutEvents</h3>
+    </a></div>  
+<br><br><br><br>
+
+<h1 style="text-align: center; font-size: xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Login Form</h1> 
+<div class="container" style="background-color: rgba(127, 255, 212, 0.226);">
+    <form id="loginForm" [formGroup]="UserlogForm">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input formControlName="email" type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input formControlName="psw" type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" style="margin-right:10px;" (click)="login()">Login</button>
+            <a style="text-decoration: none;" routerLink="/user.register"> account create</a>
+            <br>
+            <!-- Add social media icons with center alignment -->
+            <br>
+            <i style="text-align: center;" class="fab fa-facebook" style=" margin-right: 60px;"></i>
+            <i style="text-align: center;" class="fab fa-twitter" style="margin-right: 60px;"></i>
+            <i style="text-align: center;" class="fab fa-google" style="margin-right: 55px;"></i>
+            <i style="text-align: center;" class="fab fa-whatsapp" style="margin-right: 6px;"></i>
+        </div>
+    </form>
+</div>

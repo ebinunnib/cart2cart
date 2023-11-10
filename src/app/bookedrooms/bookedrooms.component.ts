@@ -20,39 +20,39 @@ export class BookedroomsComponent implements OnInit {
   ngOnInit(): void {
    this.cartitems()
 
-   this.ar.params.subscribe((data:any)=>{
-    this.pid=data.id
-    console.log(this.pid)
+  //  this.ar.params.subscribe((data:any)=>{
+  //   this.pid=data.id
+  //   console.log(this.pid)
     
 
-  })
+  // })
  
 }
 
     
 
-preview(){
-  if (localStorage.getItem("user")) {
-    this.id = localStorage.getItem("user");
-    console.log(this.id);
+// preview(){
+//   if (localStorage.getItem("user")) {
+//     this.id = localStorage.getItem("user");
+//     console.log(this.id);
     
-    this.cs.getform(this.id).subscribe({
-      next: (data: any) => {
-        console.log("pevw:::",data);
+//     this.cs.getform(this.id).subscribe({
+//       next: (data: any) => {
+//         console.log("pevw:::",data);
         
-        this.pdata=data.message
-        console.log("ppeviwe:::",this.pdata);
+//         this.pdata=data.message
+//         console.log("ppeviwe:::",this.pdata);
         
        
        
         
-      },
-      error: (error: any) => {
-        alert(error)
-      }
-    })
-  }
-}
+//       },
+//       error: (error: any) => {
+//         alert(error)
+//       }
+//     })
+//   }
+// }
 
 
 

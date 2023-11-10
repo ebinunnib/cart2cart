@@ -59,33 +59,11 @@
         <textarea formControlName="splreq" placeholder="Any other Additional Service Requests like Food,Drinks etc.... " id="special-requests" name="special-requests"></textarea>
       </div>
       
-      <!-- <h2>Payment Information</h2>
-      <div class="form-group">
-        <label for="credit-card">Credit Card Number:</label>
-        <input type="text" id="credit-card" name="credit-card" required>
-      </div>
-      <div class="form-group">
-        <label for="expiration">Expiration Date:</label>
-        <input type="text" id="expiration" name="expiration" required>
-      </div>
-      <div class="form-group">
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required>
-      </div>
-      
-      <h2>Billing Information</h2>
-      <div class="form-group">
-        <label for="billing-address">Billing Address:</label>
-        <input type="text" id="billing-address" name="billing-address">
-      </div> -->
-      
-      <!-- <h2>Additional Services</h2> -->
-    <!-- <input type="checkbox" id="agree" name="agree" required> -->
 <div>
   
 </div>
-  <button class="form-button"   type="submit">SubmitForm</button>   
-  <button routerLink="/boocked" class="form-button"   type="submit">preview</button>   
+  <button class="form-button" (click)="showLoginAlert()"  routerLink="/boocked"   type="submit">SubmitForm</button>   
+  <button class="form-button"   type="submit">preview</button>   
 
     </form> 
   </div>
