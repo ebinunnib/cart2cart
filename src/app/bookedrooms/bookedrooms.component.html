@@ -8,9 +8,14 @@
       <th scope="col"></th>
       <th scope="col">Product</th>
       <th scope="col">Price</th>
-      <!-- <th scope="col">Quantity</th> -->
-      <!-- <th scope="col">Total</th> -->
-      <th scope="col">Actions</th>
+      <th scope="col"></th>
+      <th scope="col">Cancel Room</th>
+      <th scope="col">Pay Online</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Location</th>
+
+
+
     </tr>
   </thead>
   <tbody>
@@ -19,7 +24,7 @@
       <td class="w-25">
         <img src="{{product.image}} " class="img-fluid img-thumbnail" alt="Product Image">
       </td>
-      <td>{{ product.Rname }}</td>
+      <td style=" font-family:'Times New Roman', Times, serif ; font-size:x-large;">{{ product.Rname }}</td>
       <td>₹ {{ product.price }}</td>
       <td>
         <!-- <button>-</button> -->
@@ -34,10 +39,19 @@
 
       </td>
       <td>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Payment
         </button>
 
+      </td>
+      <td>
+        <button style="background: none; border: none;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <a href=""><i class="fa-solid fa-phone-volume fa-xl" style="color: #1ce70d;"></i></a>
+        </button>
+      </td>
+      <td>
+        <button style="background: none; border: none;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <a href=""><i class="fa-solid fa-location-dot fa-xl" style="color: #065bef;"></i> </a>         </button>
       </td>
     </tr>
   </tbody>
@@ -45,75 +59,21 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade" style="background: none;" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Booking Form Preview</h1>
+  <div class="modal-dialog" style="background: none; border:none ;">
+    <div class="modal-content" style="background: none; border:none ;">
+      <div class="modal-header" style="background: none; border:none ;">
+        <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Booking Form Preview</h1> -->
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
 
-      <div class="body">
+      <div class="body" style="background: none; border:none ;">
         <div class="container " style="color: aliceblue;">
           <div>
             <form>
-              <!-- </div>
-    <form  >
-      <div class="form-group">
-        <label for="full-name">Full Name:</label>
-        <input [(ngModel)]="pdata.Fullname"  type="text" id="full-name" placeholder="Full Name" name="full-name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input [(ngModel)]="pdata.email"  type="email" id="email"placeholder="E-mail" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input [(ngModel)]="pdata.phonenum"   type="tel" id="phone"placeholder="Phone Number" name="phone" required>
-      </div>
-      <div class="form-group">
-        <label for="address">Address:</label>
-        <input [(ngModel)]="pdata.address"   type="text" id="address" placeholder="Address" name="address" required>
-      </div>
-      
-      
-      <div>
-        <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;">Reservation Details</h1>
-
-    </div>
-      <div class="form-group">
-        <label for="check-in">Check-in Date:</label>
-        <input [(ngModel)]="pdata.checkin"   type="date" id="check-in" placeholder=" ##/##/####" name="check-in" required>
-      </div>
-      <div class="form-group">
-        <label for="check-out">Check-out Date:</label>
-        <input  [(ngModel)]="pdata.checkout"  type="date" id="check-out" name="check-out" required>
-      </div>
-      <div class="form-group">
-        <label for="adults">Number of Adults:</label>
-        <input [(ngModel)]="pdata.adults"  placeholder="How Meny Adults" type="number" id="adults" name="adults" required>
-      </div>
-      <div class="form-group">
-        <label for="children">Number of Children:</label>
-        <input [(ngModel)]="pdata.children"   placeholder="How Meny Children" type="number" id="children" name="children" required>
-      </div>
-      
-      <h2>Room Preferences</h2>
-      <div class="form-group">
-        <label for="room-type">Room Type:</label>
-        <select  [(ngModel)]="pdata.roomtype"    id="room-type" name="room-type" required>
-          <option value="single">Single</option>
-          <option value="double">Double</option>
-          <option value="suite">Suite</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="special-requests">Special Requests:</label>
-        <textarea  [(ngModel)]="pdata.splreq"  placeholder="Any other Additional Service Requests like Food,Drinks etc.... " id="special-requests" name="special-requests"></textarea>
-      </div>
-       -->
+  
 
               <h2>Payment Information</h2>
               <h3>G-Pay <img style="height: 5rem;width: 5rem;"

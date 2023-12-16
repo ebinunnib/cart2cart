@@ -14,10 +14,10 @@ constructor( private router:Router){}
 ngOnInit(): void {
   this.router.events.subscribe((event) => {
     if (event instanceof NavigationEnd) {
-      this.showFooter = event.url.includes('admin-home')||event.url.includes('addproduct')||event.url.includes('editproduct')
-      this.showHeader = event.url.includes('admin-home')||event.url.includes('addproduct')||event.url.includes('editproduct')
-      this.showHeader = event.url.includes('user.login')||event.url.includes('user.register')
-      this.showFooter = event.url.includes('user.login')||event.url.includes('user.register')
+      this.showFooter = event.url.includes('admin')||event.url.includes('addproduct')||event.url.includes('editproduct')||event.url.includes('admin-login')
+      this.showHeader = event.url.includes('admin')||event.url.includes('addproduct')||event.url.includes('editproduct')||event.url.includes('admin-login')
+      this.showHeader = event.url.includes('user.login')||event.url.includes('user.register')||event.url.includes('admin-login')||event.url.includes('admin-home')||event.url.includes('Room-m')||event.url.includes('addproduct')||event.url.includes('editproduct')
+      this.showFooter = event.url.includes('user.login')||event.url.includes('user.register')||event.url.includes('admin-login')||event.url.includes('admin-home')||event.url.includes('Room-m')||event.url.includes('addproduct')||event.url.includes('editproduct')
 
 
     }

@@ -1,1 +1,73 @@
-<p>form-view works!</p>
+
+<div class="body">
+    <div class="container " style="color: aliceblue;">
+      <div>
+          <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;">Booking Form</h1>
+  
+      </div>
+      <form  >
+        <div class="form-group">
+          <label for="full-name">Full Name:</label>
+          <input [(ngModel)]="pdata.Fullname" type="text" id="full-name" placeholder="Full Name" name="full-name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input [(ngModel)]="pdata.Fullname" type="email" id="email"placeholder="E-mail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input [(ngModel)]="pdata.Fullname" type="tel" id="phone"placeholder="Phone Number" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input [(ngModel)]="pdata.Fullname" type="text" id="address" placeholder="Address" name="address" required>
+        </div>
+        
+        
+        <div>
+          <h1 style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;">Reservation Details</h1>
+  
+      </div>
+        <div class="form-group">
+          <label for="check-in">Check-in Date:</label>
+          <input [(ngModel)]="pdata.Fullname" type="date" id="check-in" placeholder=" ##/##/####" name="check-in" required>
+        </div>
+        <div class="form-group">
+          <label for="check-out">Check-out Date:</label>
+          <input [(ngModel)]="pdata.Fullname" type="date" id="check-out" name="check-out" required>
+        </div>
+        <div class="form-group">
+          <label for="adults">Number of Adults:</label>
+          <input [(ngModel)]="pdata.Fullname" placeholder="How Meny Adults" type="number" id="adults" name="adults" required>
+        </div>
+        <div class="form-group">
+          <label for="children">Number of Children:</label>
+          <input [(ngModel)]="pdata.Fullname" placeholder="How Meny Children" type="number" id="children" name="children" required>
+        </div>
+        
+        <h2>Room Preferences</h2>
+        <div class="form-group">
+          <label for="room-type">Room Type:</label>
+          <select [(ngModel)]="pdata.Fullname"   id="room-type" name="room-type" required>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="special-requests">Special Requests:</label>
+          <textarea [(ngModel)]="pdata.Fullname" placeholder="Any other Additional Service Requests like Food,Drinks etc.... " id="special-requests" name="special-requests"></textarea>
+        </div>
+        
+  <div>
+    
+  </div>
+    <button class="form-button" routerLink="/booked"     type="submit">SubmitForm</button>   
+    <button class="form-button"   type="submit">preview</button>  
+   
+  
+      </form> 
+    </div>
+  
+  </div>
+  

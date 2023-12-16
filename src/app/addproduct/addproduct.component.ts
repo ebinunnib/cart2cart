@@ -32,7 +32,7 @@ export class AddproductComponent implements OnInit {
     this.cs.addProduct(bodyData).subscribe({
       next:(result:any)=>{
         alert(result.message)
-        this.rout.navigateByUrl("")
+        this.rout.navigateByUrl("/Room-m")
 
         
       }

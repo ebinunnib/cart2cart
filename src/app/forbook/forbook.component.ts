@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class ForbookComponent implements OnInit {
   constructor(private fb: FormBuilder, private cs: CartserviceService, private rout: Router) { }
   SelectType: any = ""
-uid:any=""
+  uid: any = ""
   BookForm = this.fb.group({
     Fullname: ['', [Validators.required]],
     email: ['', [Validators.required]],
@@ -44,9 +44,9 @@ uid:any=""
     this.cs.book(bodyData).subscribe({
       next: (result: any) => {
         console.log(result.message);
-
-        alert(result.message)
-
+        this.showLoginAlert()
+        // alert(result.message)
+this.rout.navigateByUrl("/boocked")
 
       }
     })
@@ -56,19 +56,19 @@ uid:any=""
     this.SelectType = typevalue;
   }
 
-bookitems(){
-  if(localStorage.getItem("user")){
-  this.uid=localStorage.getItem("user")
+  bookitems() {
+    if (localStorage.getItem("user")) {
+      this.uid = localStorage.getItem("user")
 
+    }
   }
-}
-showLoginAlert() {
-  Swal.fire({
-    title: " Booking Success!",
+  showLoginAlert() {
+    Swal.fire({
+      title: " Booking Success!",
       text: "Do you want to continue",
       icon: "success",
-      confirmButtonText: "Cool"
-  });
-}
+      confirmButtonText: "ok"
+    });
+  }
 
 }

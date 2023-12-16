@@ -11,13 +11,14 @@ body {
 form .addresort{
     margin-bottom: 5rem;
     padding-bottom: 5rem;
+    
 }
 
 .container {
     max-width: 800px;
     /* margin: 0 auto; */
     /* padding: 20px; */
-    background-color: #ffffff3f;
+    background-color: #ffffff21;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -35,13 +36,13 @@ form .addresort{
 .form-group input[type="number"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #e61212;
+    border-radius: 4px; 
 }
 
 .form-group button {
     background-color: #007bff;
-    color: #fff;
+    color: #f7f5f5;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;

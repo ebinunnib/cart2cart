@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartserviceService } from '../servicefile/cartservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-singleview',
   templateUrl: './singleview.component.html',
@@ -43,10 +43,16 @@ export class SingleviewComponent implements OnInit {
     }
 
     }else{
-      alert("please login first")
+      this.showLoginAlert()
       this.rout.navigateByUrl("/user.login")
 
     }
   } 
- 
+ showLoginAlert() {
+    Swal.fire({
+      title: "Please Login first !",
+      icon: "warning",
+      confirmButtonText: "Close"
+    });
+  }
 }

@@ -15,6 +15,7 @@ import { BookedroomsComponent } from './bookedrooms/bookedrooms.component';
 import { ROOMSComponent } from './rooms/rooms.component';
 import { ForbookComponent } from './forbook/forbook.component';
 import { ReviewComponent } from './review/review.component';
+import { FormViewComponent } from './form-view/form-view.component';
 
 const routes: Routes = [
   { path: "", component: LandingComponent },
@@ -32,6 +33,8 @@ const routes: Routes = [
    { path: "rooms", component:ROOMSComponent },
    { path: "forbook", component:ForbookComponent },
    { path: "review/:id", component:ReviewComponent },
+   { path: "form", component:FormViewComponent },
+
 
 
 

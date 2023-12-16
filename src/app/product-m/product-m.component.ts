@@ -42,6 +42,7 @@ export class ProductMComponent implements OnInit {
       next: (result: any) => {
         alert("item deleted")
         this.rout.navigateByUrl("product-m")
+        this.cs.getAllProduct()
       }
     })
   }

@@ -34,7 +34,7 @@ constructor(private rout:Router,private cs:CartserviceService,private ar:Activat
     this.cs.updateProduct(this.pid,this.pdata).subscribe({
       next:(result:any)=>{
         alert("data updated successfull")
-        this.rout.navigateByUrl(`products/view/${this.pid}`)
+        this.rout.navigateByUrl('/Room-m')
 
       }
   })

@@ -1,6 +1,7 @@
 <body>
-    <div class="container addresort " style="color: aliceblue; ">
-        <h2 style="text-align: center; font-size: xx-large; ">Add Rooms</h2>
+    <br><br><br>
+    <div class="container addresort " style="color: aliceblue;  ">
+        <h2 style="text-align: center; font-size: xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Add Rooms</h2>
         <form  [formGroup]="addProductForm" (ngSubmit)="addProduct()">
             <div class="form-group" >
                 <label for="Rname">Room Name</label>
@@ -28,7 +29,7 @@
                 <input formControlName="image" type="text" id="image" name="image" required>
             </div>
             <div class="form-group mt-3  width-30px">
-                <button  class="mb-3 width-30px" type="submit">Add Product</button>
+                <button  class="mb-3 width-30px" type="submit">Add New Room</button>
             </div>
         </form>
     </div>

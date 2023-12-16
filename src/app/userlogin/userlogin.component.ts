@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CartserviceService } from '../servicefile/cartservice.service';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-userlogin',
   templateUrl: './userlogin.component.html',
@@ -18,21 +18,41 @@ export class UserloginComponent  implements OnInit {
   login(){
     this.cs.userLogin(this.UserlogForm.value.email,this.UserlogForm.value.psw).subscribe({
 next:(result:any)=>{
-  alert(result.message)
+  // alert(result.message)
  
   localStorage.setItem("user",result._id)
   localStorage.setItem("token",result.token)
   localStorage.setItem("currentname",result.currentuser)
+  this.showLoginAlert()
   this.rout.navigateByUrl("")
  },
  error:(result:any)=>{
-  alert(result.error.message)
+  // alert(result.error.message)
+  this.showLoginAlert2()
  }
 
     })
 
 
 
+  }
+  showLoginAlert() {
+    Swal.fire({
+      
+      title: 
+      " Welcome Buddy....!!",
+      icon: "success",
+      confirmButtonText: "ok"
+    });
+  }
+
+  showLoginAlert2() {
+    Swal.fire({
+      title: "incorrect details!",
+      text: "Do you want to continue",
+      icon: "warning",
+      confirmButtonText: "ok"
+    });
   }
 
 }

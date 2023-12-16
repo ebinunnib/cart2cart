@@ -115,7 +115,7 @@ userDelete(userid: any) {
 book(body: any) {
   return this.http.post(`${this.baseUrl}/user/bookForm`,body)
 }
-getform(id:any) {
-  return this.http.get(`${this.baseUrl}/book/form/${id}`)
+getform() {
+  return this.http.get(`${this.baseUrl}/book/form`)
 }
 }
